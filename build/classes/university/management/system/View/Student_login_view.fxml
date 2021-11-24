@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="501.0" prefWidth="340.0" style="-fx-background-color: #3498db;">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="51.0" prefWidth="327.0" style="-fx-text-fill: #ffff;" text="Student Panel">
+               <font>
+                  <Font size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" top="-10.0" />
+               </VBox.margin>
+            </Label>
+            <Label style="-fx-text-fill: #ffff;" text="Your ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField prefHeight="37.0" promptText="Username">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Label style="-fx-text-fill: #ffff;" text="Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <PasswordField prefHeight="37.0" promptText="******">
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="315.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10; -fx-text-fill: #ffff;" text="Login">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
