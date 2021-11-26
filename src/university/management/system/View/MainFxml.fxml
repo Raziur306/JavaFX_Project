@@ -3,26 +3,37 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="571.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.management.system.View.MainFxmlController">
+<AnchorPane id="AnchorPane" prefHeight="645.0" prefWidth="1003.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.management.system.View.MainFxmlController">
    <children>
-      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2c3e50;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
           <Tab fx:id="admin_tab" text="Admin Panel">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2c3e50;"  >
-                      <fx:include source="Admin_login_view.fxml" />
-                  </AnchorPane>
+                   
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #2c3e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <fx:include source="Admin_login_view.fxml" />
+      </StackPane>
                </content></Tab>
               
           <Tab fx:id="student_tab" text="Student Panel">
                <content>
-                  <AnchorPane style="-fx-background-color: #2c3e50;">
-                      
-                         <fx:include source="Student_login_view.fxml" />
-                  </AnchorPane>
+                  
+                <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #2c3e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <fx:include source="Student_login_view.fxml" />
+      </StackPane>
+                  
                </content></Tab>
         </tabs>
       </TabPane>
+      <StackPane AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #ffff;" text="Developed | Design by Boolean Autocrat Team" />
+         </children>
+      </StackPane>
+
+          
    </children>
 </AnchorPane>

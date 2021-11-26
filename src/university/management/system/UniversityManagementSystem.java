@@ -13,10 +13,11 @@ public class UniversityManagementSystem extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("View/MainFxml.fxml"));
         root.getStylesheets().add(getClass().getResource("Stylesheet/style.css").toExternalForm());
               
-                
         
         Scene scene = new Scene(root);
-        stage.setScene(scene);
+        stage.setTitle("University Management System");
+        
+       stage.setScene(scene);
         stage.show();
     }
     
