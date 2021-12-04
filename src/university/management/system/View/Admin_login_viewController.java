@@ -1,28 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package university.management.system.View;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import Conroller.Login_Controller;
+import java.sql.SQLException;
 
-/**
- * FXML Controller class
- *
- * @author raziu
- */
 public class Admin_login_viewController implements Initializable {
 
     @FXML
-    private TextField admin_email_input;
+    private TextField admin_input_email;
     @FXML
-    private PasswordField admin_pass_input;
+    private PasswordField admin_input_pass;
 
     /**
      * Initializes the controller class.
@@ -30,19 +26,34 @@ public class Admin_login_viewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-       
-    }    
+    }
 
     @FXML
-    private void adminLoginBtn(ActionEvent event) {
-      String email = admin_email_input.getText().trim();
-      String pass = admin_pass_input.getText();
-      if(email.isEmpty())
-            System.out.println("Please Enter your email");
-      if(pass.isEmpty())
-            System.out.println("Please enter valid password");
-        
-        
+    private void adminLoginClick(ActionEvent event) throws SQLException {
+        String email = admin_input_email.getText().trim();
+        String password = admin_input_pass.getText();
+        ObservableList<String> erroClass = null;
+
+        //alert
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Input fields empty");
+        alert.setContentText("Please fill all Input Filed");
+        if (email.isEmpty()) {
+            erroClass = admin_input_email.getStyleClass();
+            erroClass.add("tfError");
+            alert.show();
+        }
+        if (password.isEmpty()) {
+            erroClass = admin_input_pass.getStyleClass();
+            erroClass.add("tfError");
+            alert.show();
+        }
+        if (!email.isEmpty() && !password.isEmpty()) {
+            Login_Controller log = new Login_Controller(email, password);
+            boolean b = log.login_AS_a();
+            System.out.println(b);
+        }
+
     }
-    
+
 }

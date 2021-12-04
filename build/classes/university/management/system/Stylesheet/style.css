@@ -36,3 +36,10 @@
     -fx-alignment: CENTER;
     -fx-text-fill: white;
 }
+
+
+/*input validation error*/
+.tfError{
+     -fx-border-color: red;
+     -fx-focus-color:red;
+}
